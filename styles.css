@@ -427,7 +427,10 @@ section {
 }
 
 .experience-content {
-    max-width: 800px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    max-width: 1200px;
     margin: 0 auto;
 }
 
@@ -840,6 +843,11 @@ section {
 
     .stat-item {
         padding: 1rem;
+    }
+
+    .experience-content {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
     }
 
     .experience-item {

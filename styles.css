@@ -613,7 +613,7 @@ section {
     overflow: hidden;
 }
 
-.project-image::before {
+.image-placeholder::before {
     content: '';
     position: absolute;
     top: 0;

@@ -547,10 +547,6 @@ section {
     transition: all 0.3s ease;
 }
 
-.skill-item:hover {
-    background: linear-gradient(135deg, #6b7280 0%, #9ca3af 100%);
-    transform: translateX(5px);
-}
 
 .skill-item i {
     font-size: 1.5rem;
@@ -596,6 +592,9 @@ section {
     overflow: hidden;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
 }
 
 .project-card:hover {
@@ -636,6 +635,9 @@ section {
 
 .project-content {
     padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
 }
 
 .project-content h3 {
@@ -670,6 +672,7 @@ section {
 .project-links {
     display: flex;
     gap: 1rem;
+    margin-top: auto;
 }
 
 .project-link {

@@ -137,16 +137,6 @@ document.querySelectorAll('.project-card').forEach(card => {
     });
 });
 
-// Skill items hover effects
-document.querySelectorAll('.skill-item').forEach(item => {
-    item.addEventListener('mouseenter', function() {
-        this.style.transform = 'translateX(5px)';
-    });
-    
-    item.addEventListener('mouseleave', function() {
-        this.style.transform = 'translateX(0)';
-    });
-});
 
 // Parallax effect for hero section
 window.addEventListener('scroll', () => {
@@ -257,11 +247,6 @@ style.textContent = `
         z-index: 0;
     }
     
-    /* Subtle hover effect for skill items */
-    .skill-item:hover i {
-        color: #16a34a !important;
-        transition: color 0.3s ease;
-    }
     
     /* Data flow animation for hero section */
     .hero::after {

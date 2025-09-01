@@ -48,11 +48,10 @@
         <div class="hero-container">
             <div class="hero-content">
                 <h1 class="hero-title">Hi, I'm <span class="highlight">Max Halanen</span></h1>
-                <h2 class="hero-subtitle">Systems Engineer & Embedded Developer</h2>
+                <h2 class="hero-subtitle">Computer Scientist & Embedded Developer</h2>
                 <p class="hero-description">
                     Passionate about embedded systems, IoT development, and systems engineering. 
-                    Currently pursuing Computer Science at Carleton University with a focus on 
-                    microcontroller programming, hardware-software integration, network protocols, and sensor systems.
+                    Currently pursuing Computer Science at Carleton University with a focus in software engineering.
                 </p>
                 <div class="hero-buttons">
                     <a href="#projects" class="btn btn-primary">View My Work</a>
@@ -72,15 +71,15 @@
             <div class="about-content">
                 <div class="about-text">
                     <p>
-                        I'm a dedicated Computer Science student at Carleton University with a passion for embedded systems, 
-                        IoT technology, and systems engineering. My experience spans from microcontroller programming to 
+                        I'm a third year Computer Science student at Carleton University with a passion for embedded systems, 
+                        IoT technology, and systems engineering. My experience ranges from microcontroller programming to 
                         large-scale network automation and deployment systems.
                     </p>
                     <p>
-                        Currently working as a Systems Engineer Intern at General Dynamics, I specialize in cross-network 
-                        automation, remote deployment systems, and embedded device development. My academic background 
-                        combined with hands-on industry experience has equipped me with both theoretical knowledge and 
-                        practical skills in systems engineering and embedded development.
+                        Currently working as a Embedded Software Developer at General Dynamics, I specialize in cross-network 
+                        automation, Machine-to-Machine engineering, and embedded device development. My academic background 
+                        combined with hands-on industry experience has provided me with both theoretical knowledge and 
+                        practical skills in embedded development and systems engineering.
                     </p>
                     <div class="education">
                         <h3>Education</h3>
@@ -122,16 +121,15 @@
                     <div class="experience-description">
                         <div class="experience-highlights">
                             <ul>
-                                <li>Developed router automation system that saved company over $25,000 and invalidated weeks of work by another team</li>
-                                <li>Built RAG chain LLM to increase lab efficiency by automating document search and retrieval processes</li>
-                                <li>Coded and recompiled packet dissectors for proprietary packet formats in network analysis tools</li>
-                                <li>Created cross-network remote installer deploying software across hundreds of machines using PowerShell and WinRM</li>
-                                <li>Automated media file auditing system comparing hundreds of files against specification spreadsheets</li>
+                                <li>Developed router automation app that outperformed a competing in-development solution, saving the company thousands in expected development costs.</li>
+                                <li>Built RAG chain LLM to increase lab efficiency by assisting in document search and retrieval processes.</li>
+                                <li>Programmed a custom Wireshark packet dissector to support debugging and analysis.</li>
+                                <li>Created cross-network remote installer deploying software across hundreds of machines using PowerShell and WinRM.</li>
+                                <li>Automated media file auditing system, comparing tens of thousands of files against specification spreadsheets.</li>
                             </ul>
                         </div>
                     </div>
                 </div>
-
                 <div class="experience-item">
                     <div class="experience-header">
                         <h3>Programming Instructor</h3>
@@ -287,14 +285,13 @@
                     </div>
                     <div class="project-content">
                         <h3>STM32 IoT Thermostat System</h3>
-                        <p>Built an IoT thermostat using STM32H5 microcontroller with BMP180 sensor for temperature, pressure, and altitude monitoring. Implemented UDP server using LwIP stack to transmit sensor data to HTTP server on home lab, accessible globally through Tailscale VPN network.</p>
+                        <p>IoT thermostat using STM32H5 with BMP180 sensor for temperature, pressure, and altitude monitoring. Implemented UDP server using LwIP stack to transmit sensor data to HTTP server on home lab, accessible globally through Tailscale VPN network.</p>
                         <div class="project-tech">
                             <span class="tech-tag">STM32H5</span>
                             <span class="tech-tag">C</span>
                             <span class="tech-tag">LwIP</span>
                             <span class="tech-tag">UDP</span>
                             <span class="tech-tag">BMP180</span>
-                            <span class="tech-tag">Tailscale/VPN</span>
                         </div>
                         <div class="project-links">
                             <a href="https://github.com/maxhalanen/thermostat" class="project-link"><i class="fab fa-github"></i> Code</a>
@@ -309,7 +306,7 @@
                     </div>
                     <div class="project-content">
                         <h3>Handheld GPS Prototype</h3>
-                        <p>Developed a handheld GPS navigation device using ESP32 to display maps in real-time based on user location. Integrated SD card storage, TFT LCD display over SPI, and magnetometer via I2C for comprehensive navigation functionality.</p>
+                        <p>Handheld GPS navigation device using an ESP32 to display maps in real time based on user location. Maps loaded from SD card to TFT LCD over SPI, integrated a magnetometer via I2C for compass heading (direntionality).</p>
                         <div class="project-tech">
                             <span class="tech-tag">ESP32</span>
                             <span class="tech-tag">C/C++</span>
@@ -331,12 +328,16 @@
                     </div>
                     <div class="project-content">
                         <h3>Arch Linux Home Lab</h3>
-                        <p>Built comprehensive home lab infrastructure on Arch Linux with network services, development environments, and monitoring systems. Includes containerized applications, automated backups, and custom networking configurations for IoT device integration.</p>
+                        <p>Arch Linux home lab linked to the internet via a VNC server and Tailscale VPN. The server helps maintain a consistent development environment across different machines, as well as run network applications form a centralized computer (dotfiles on GitHub).</p>
                         <div class="project-tech">
                             <span class="tech-tag">Arch Linux</span>
-                            <span class="tech-tag">Docker</span>
                             <span class="tech-tag">Networking</span>
                             <span class="tech-tag">dotfiles</span>
+                            <span class="tech-tag">NeoVim</span>
+                            <span class="tech-tag">Lua</span>
+                            <span class="tech-tag">VNC</span>
+                            <span class="tech-tag">Tailscale/VPN</span>
+
                         </div>
                         <div class="project-links">
                             <a href="https://github.com/maxhalanen/dotfiles/tree/master" class="project-link"><i class="fab fa-github"></i> Code</a>

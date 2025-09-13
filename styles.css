@@ -501,6 +501,99 @@ section {
     left: 0;
 }
 
+/* Current Position Section */
+.current-position {
+    background: linear-gradient(135deg, #1f2937 0%, #374151 100%);
+    position: relative;
+}
+
+.current-position::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: 
+        /* Circuit traces */
+        linear-gradient(90deg, transparent 49%, rgba(34, 197, 94, 0.04) 50%, transparent 51%),
+        linear-gradient(0deg, transparent 49%, rgba(34, 197, 94, 0.04) 50%, transparent 51%);
+    background-size: 60px 60px;
+    pointer-events: none;
+}
+
+.current-position-content {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.current-position-item {
+    background: linear-gradient(135deg, #374151 0%, #4b5563 100%);
+    padding: 3rem;
+    border: 2px solid rgba(34, 197, 94, 0.3);
+    border-radius: 16px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;
+}
+
+.current-position-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 20px rgba(0, 0, 0, 0.3);
+}
+
+.current-position-header {
+    margin-bottom: 1.5rem;
+}
+
+.current-position-header h3 {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: #22c55e;
+    margin-bottom: 0.5rem;
+}
+
+.current-position-company h4 {
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: #16a34a;
+    margin-bottom: 0.25rem;
+}
+
+.current-position-duration {
+    color: #9ca3af;
+    font-size: 1rem;
+    font-weight: 500;
+}
+
+.current-position-description p {
+    color: #d1d5db;
+    font-size: 1.1rem;
+    line-height: 1.7;
+    margin-bottom: 1.5rem;
+}
+
+.current-position-highlights ul {
+    list-style: none;
+    padding: 0;
+}
+
+.current-position-highlights li {
+    color: #d1d5db;
+    font-size: 1.1rem;
+    line-height: 1.6;
+    margin-bottom: 0.75rem;
+    padding-left: 1.5rem;
+    position: relative;
+}
+
+.current-position-highlights li::before {
+    content: '→';
+    color: #22c55e;
+    font-weight: bold;
+    position: absolute;
+    left: 0;
+}
+
 /* Skills Section */
 .skills-grid {
     display: grid;
@@ -545,17 +638,24 @@ section {
     border: 1px solid rgba(34, 197, 94, 0.2);
     border-radius: 8px;
     transition: all 0.3s ease;
+    overflow: hidden;
+    min-width: 0;
+}
+
+.skill-item span {
+    font-weight: 500;
+    color: #d1d5db;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    min-width: 0;
 }
 
 
 .skill-item i {
     font-size: 1.5rem;
     color: #22c55e;
-}
-
-.skill-item span {
-    font-weight: 500;
-    color: #d1d5db;
+    flex-shrink: 0;
 }
 
 /* Projects Section */

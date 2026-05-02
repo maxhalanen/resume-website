@@ -1017,30 +1017,26 @@ section {
     .experience-item {
         padding: 1.5rem;
         min-height: unset;
+        width: 100% !important;
+        min-width: 100% !important;
     }
 
     .experience-slider {
-        gap: 0;
+        display: block;
     }
 
     .slider-wrapper {
-        width: 100%;
+        overflow: visible;
+    }
+
+    .experience-content {
+        flex-direction: column;
+        transform: none !important;
+        gap: 1.5rem;
     }
 
     .slider-btn {
-        position: absolute;
-        top: 50%;
-        transform: translateY(-50%);
-        z-index: 2;
-        background: rgba(31, 41, 55, 0.85);
-    }
-
-    .slider-prev {
-        left: 6px;
-    }
-
-    .slider-next {
-        right: 6px;
+        display: none;
     }
 
     .current-position-content {

@@ -191,7 +191,17 @@ document.addEventListener('DOMContentLoaded', () => {
         return window.innerWidth <= 768 ? 1 : 2;
     }
 
+    function isMobile() {
+        return window.innerWidth <= 768;
+    }
+
     function update() {
+        if (isMobile()) {
+            track.style.transform = '';
+            items.forEach(item => { item.style.width = ''; item.style.minWidth = ''; });
+            return;
+        }
+
         const visible = visibleCount();
         const wrapperWidth = wrapper.clientWidth;
         const itemWidth = (wrapperWidth - GAP * (visible - 1)) / visible;

@@ -175,6 +175,47 @@ window.addEventListener('load', () => {
     document.body.classList.add('loaded');
 });
 
+// Experience Netflix-style Slider
+document.addEventListener('DOMContentLoaded', () => {
+    const track = document.querySelector('.experience-content');
+    const wrapper = document.querySelector('.slider-wrapper');
+    const prevBtn = document.querySelector('.slider-prev');
+    const nextBtn = document.querySelector('.slider-next');
+    if (!track || !wrapper || !prevBtn || !nextBtn) return;
+
+    const items = Array.from(track.querySelectorAll('.experience-item'));
+    const GAP = 32; // 2rem
+    let offset = 0;
+
+    function visibleCount() {
+        return window.innerWidth <= 768 ? 1 : 2;
+    }
+
+    function update() {
+        const visible = visibleCount();
+        const wrapperWidth = wrapper.clientWidth;
+        const itemWidth = (wrapperWidth - GAP * (visible - 1)) / visible;
+
+        items.forEach(item => {
+            item.style.width = itemWidth + 'px';
+            item.style.minWidth = itemWidth + 'px';
+        });
+
+        const maxOffset = Math.max(0, items.length - visible);
+        offset = Math.min(Math.max(0, offset), maxOffset);
+
+        track.style.transform = `translateX(-${offset * (itemWidth + GAP)}px)`;
+        prevBtn.disabled = offset === 0;
+        nextBtn.disabled = offset >= maxOffset;
+    }
+
+    prevBtn.addEventListener('click', () => { offset--; update(); });
+    nextBtn.addEventListener('click', () => { offset++; update(); });
+    window.addEventListener('resize', () => { offset = 0; update(); });
+
+    update();
+});
+
 // Copy email to clipboard functionality
 document.querySelectorAll('.contact-item').forEach(item => {
     if (item.textContent.includes('@')) {

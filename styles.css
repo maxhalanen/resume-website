@@ -1016,6 +1016,31 @@ section {
 
     .experience-item {
         padding: 1.5rem;
+        min-height: unset;
+    }
+
+    .experience-slider {
+        gap: 0;
+    }
+
+    .slider-wrapper {
+        width: 100%;
+    }
+
+    .slider-btn {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        z-index: 2;
+        background: rgba(31, 41, 55, 0.85);
+    }
+
+    .slider-prev {
+        left: 6px;
+    }
+
+    .slider-next {
+        right: 6px;
     }
 
     .current-position-content {

@@ -199,8 +199,12 @@ document.addEventListener('DOMContentLoaded', () => {
         if (isMobile()) {
             track.style.transform = '';
             items.forEach(item => { item.style.width = ''; item.style.minWidth = ''; });
+            prevBtn.style.display = 'none';
+            nextBtn.style.display = 'none';
             return;
         }
+        prevBtn.style.display = '';
+        nextBtn.style.display = '';
 
         const visible = visibleCount();
         const wrapperWidth = wrapper.clientWidth;
